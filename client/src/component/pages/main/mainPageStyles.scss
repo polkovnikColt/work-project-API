@@ -1,0 +1,64 @@
+@import "src/component/mainStyles";
+
+.image-width {
+  width: 800px;
+  height: 300px;
+}
+
+.carousel-width {
+  width: 750px;
+}
+
+.main-text {
+  @include font-medium;
+}
+
+
+@media screen and (max-width: 1000px) {
+  .image-width {
+    width: 700px;
+    height: 300px;
+  }
+  .carousel-width {
+    width: 650px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .image-width {
+    width: 550px;
+    height: 300px;
+  }
+  .carousel-width {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .image-width {
+    width: 520px;
+    height: 300px;
+  }
+  .carousel-width {
+    width: 470px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .image-width {
+    width: 490px;
+    height: 300px;
+  }
+  .carousel-width {
+    width: 440px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .image-width {
+    width: 350px;
+    height: 270px;
+  }
+  .carousel-width {
+    width: 330px;
+  }
+}
