@@ -14,7 +14,7 @@
 }
 
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1050px) {
   .image-width {
     width: 700px;
     height: 300px;
@@ -24,7 +24,7 @@
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 920px) {
   .image-width {
     width: 550px;
     height: 300px;
@@ -34,31 +34,51 @@
   }
 }
 
-@media screen and (max-width: 690px) {
+@media screen and (max-width: 730px) {
   .image-width {
-    width: 520px;
+    width: 500px;
     height: 300px;
   }
   .carousel-width {
-    width: 470px;
+    width: 450px;
   }
 }
 @media screen and (max-width: 690px) {
   .image-width {
-    width: 490px;
+    width: 450px;
     height: 300px;
   }
   .carousel-width {
-    width: 440px;
+    width: 400px;
   }
 }
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 600px) {
   .image-width {
-    width: 350px;
+    margin: 0 auto;
+    width: 380px;
     height: 270px;
   }
   .carousel-width {
-    width: 330px;
+    width: 360px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .image-width {
+    width: 320px;
+    height: 240px;
+  }
+  .carousel-width {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .image-width {
+    width: 300px;
+    height: 240px;
+  }
+  .carousel-width {
+    width: 270px;
   }
 }

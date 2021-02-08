@@ -1,0 +1,5 @@
+@import '../client/src/component/mainStyles';
+
+.accordion-title{
+  @include font-medium;
+}

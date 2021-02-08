@@ -1,46 +1,75 @@
 import React, {useState, useEffect} from 'react'
 import "./leftSidebar.scss"
+import left from '../../images/iconmonstr-arrow-25.svg'
+import right from '../../images/iconmonstr-arrow-64.svg'
 import NavLink from "./NavLink";
 
-let links =
-    [{title: "Головна",href:"/", subtitle: []},
-    {title: "Новини",href:"/news", subtitle: []},
-        {title: "Про нас",href:"/about",  subtitle: []},
-        {title: "Контакти",href:"/contact",  subtitle: []},
-        {title: "Міжнародна співпраця",href:"/world",  subtitle: []},
-        {title: "Конференцій, семінари",href:"/seminars",  subtitle: []}]
 
 export default function LeftSidebar() {
 
     const [width, setWidth] = useState(window.innerWidth);
     const [visible, setVisible] = useState(false);
+    const [arrow, setArrow] = useState(false);
 
     useEffect(() => {
-        console.log(width);
-    }, [width]);
+        function handleResize() {
+            setWidth(window.innerWidth);
+        }
 
-    if (width >= 620 || visible) {
+        window.addEventListener('resize', handleResize);
+    });
+
+    if (!visible && width < 765) {
         return (
-            <div style={{"min-height": window.innerHeight - 65 + "px"}}
-                className="col-3 bg-light text-center box-shadow">
+            <div className="">
+                <div style={{"top": window.innerHeight / 2 + "px"}}
+                     className="open-button"
+                     onClick={() => {
+                         setVisible(true)
+                         setArrow(prev => !prev)
+                     }
+                     }><img src={arrow ? right : left} alt=""/>
+                </div>
+            </div>
+        )
+    }
+
+    if (visible && width < 765) {
+        return (
+            <div
+                style={{"min-height": window.innerHeight + "px"}}
+                className="bg-light text-center box-shadow bar">
                 <div
                     className="title py-3">
                     Розділи
                 </div>
-                {links.map(item =>
-                    <NavLink item={item} key={item}/>
-                )}
+                {/*{links.map(item =>*/}
+                {/*    <NavLink item={item} key={item}/>*/}
+                {/*)}*/}
+                <div
+                    onClick={() => {
+                        setVisible(false);
+                        setArrow(prev => !prev)
+                    }
+                    }
+                    className="close-button"
+                ><img src={arrow ? right : left} alt=""/>
+                </div>
             </div>
         )
     }
 
     return (
-        <div className="col-1" onClick={() => {
-            setVisible(prev => !prev)
-        }}>
-            <div className="open-button">
-                <span className="position-relative">+</span>
+        <div
+            style={{"min-height": window.innerHeight - 65 + "px"}}
+            className="col-3 bg-light text-center box-shadow">
+            <div
+                className="title py-3">
+                Розділи
             </div>
+            {/*{links.map(item =>*/}
+            {/*    <NavLink item={item} key={item}/>*/}
+            {/*)}*/}
         </div>
     )
 }

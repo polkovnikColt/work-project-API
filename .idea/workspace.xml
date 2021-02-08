@@ -23,38 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76484e9e-fdfa-4fda-b897-f6fd1bc18f29" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/component/mainStyles.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/component/navbar/Modal.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/component/navbar/Navbar.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/component/navbar/navbarStyles.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/component/pages/main/Carousel.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/component/pages/main/CarouselItem.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/component/pages/main/mainPageStyles.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/component/sidebars/NavLink.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/component/sidebars/leftSidebar.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/component/sidebars/leftSidebar.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client" beforeDir="false" afterPath="$PROJECT_DIR$/client" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/client/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/config/config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/server.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/server/admins/admins.service.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/server/admins/adminsRouter.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/server/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/server/login/loginRouter.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/server/middleware/passport.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/server/news/news.service.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/server/news/newsRouter.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/server/schemas/adminsSchema.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/server/schemas/newsSchema.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/server/tools/toolsRouter.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +38,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/client" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1nhFbdstQZ45heMDL03hl00MTlH" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -103,7 +72,8 @@
       <updated>1611834487981</updated>
       <workItem from="1611834489039" duration="2305000" />
       <workItem from="1611837479426" duration="27574000" />
-      <workItem from="1612105629977" duration="36897000" />
+      <workItem from="1612105629977" duration="38236000" />
+      <workItem from="1612340947846" duration="35621000" />
     </task>
     <servers />
   </component>
@@ -123,10 +93,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="371" y="108" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1612277615994">
+    <state x="371" y="108" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1612341021801">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="371" y="108" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.720@0.0.1280.720" timestamp="1612277615994" />
+    <state x="371" y="108" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.720@0.0.1280.720" timestamp="1612341021801" />
     <state x="310" y="139" key="EditFileWatcherDialog" timestamp="1611838406865">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
@@ -135,10 +105,14 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="421" y="116" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1611840014552" />
-    <state x="297" y="161" key="run.anything.popup" timestamp="1612296914501">
+    <state x="111" y="186" width="587" height="534" key="find.popup" timestamp="1612467253455">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="297" y="161" key="run.anything.popup/0.0.1280.720@0.0.1280.720" timestamp="1612296914501" />
+    <state x="111" y="186" width="587" height="534" key="find.popup/0.0.1280.720@0.0.1280.720" timestamp="1612467253455" />
+    <state x="297" y="161" key="run.anything.popup" timestamp="1612352883942">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="297" y="161" key="run.anything.popup/0.0.1280.720@0.0.1280.720" timestamp="1612352883942" />
     <state x="303" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1612295396277">
       <screen x="0" y="0" width="1280" height="720" />
     </state>

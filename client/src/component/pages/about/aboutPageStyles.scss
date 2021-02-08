@@ -1,0 +1,5 @@
+@import "src/component/mainStyles";
+
+.text{
+  @include font-medium;
+}

@@ -1,5 +1,10 @@
 $font-color: #333330;
 $font-family: "Bookman Old Style";
+
+.max-height{
+  max-height: 700px;
+}
+
 @mixin font-big {
   font-size: 30px;
   font-weight: bold;
@@ -18,9 +23,32 @@ $font-family: "Bookman Old Style";
     font-size: 17px;
   }
   @media screen and (max-width: 361px){
+    font-size: 14px;
+  }
+}
+
+@mixin font-medium-white {
+  font-size: 25px;
+  font-weight: bold;
+  font-family: $font-family;
+  color: #fffff3;
+  display: inline-block;
+  padding-top: .3125rem;
+  padding-bottom: .3125rem;
+  margin-right: 1rem;
+  line-height: inherit;
+  white-space: nowrap;
+  @media screen and (max-width: 560px){
+    font-size: 17px;
+  }
+  @media screen and (max-width: 450px){
+    font-size: 13px;
+  }
+  @media screen and (max-width: 361px){
     font-size: 11px;
   }
 }
+
 @mixin font-small{
   font-size: 15px;
   font-family: $font-family;
@@ -28,4 +56,10 @@ $font-family: "Bookman Old Style";
   @media screen and (max-width: 560px){
     font-size: 13px;
   }
+  @media screen and (max-width: 360px){
+    font-size: 10px;
+  }
 }
+
+
+

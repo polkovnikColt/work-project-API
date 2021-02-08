@@ -1,21 +1,22 @@
 @import "src/component/mainStyles";
+
 $font-color: gray;
 $link-color: #333330;
+$left: 30%;
 
 .title {
   @include font-medium;
-
 }
 
 .box-shadow {
   box-shadow: #333330 0 0 3px;
 }
 
-.min-height{
+.min-height {
   min-height: 500px;
 }
 
-.link-div{
+.link-div {
   height: auto;
 }
 
@@ -24,19 +25,51 @@ $link-color: #333330;
   color: $font-color;
   @include font-small;
 
-  &:hover,focus{
+  &:hover, focus {
     color: $link-color;
     transition: 0.1s;
-      text-decoration: none;
+    text-decoration: none;
   }
 }
 
-.open-button{
-  width: 100%;
-  height: 30%;
-  background-color: whitesmoke;
+.bar {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: $left;
+}
+
+
+.open-button {
+  position: fixed;
+  z-index: 1000;
+  width: 25px;
+  height: 100px;
+  background-color: #f8f9fa!important;
   box-shadow: #333330 0 0 3px;
-  border-bottom-right-radius: 4px;
-  border-top-right-radius: 4px;
-  margin: 200% 0;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  img{
+    width: 18px;
+    height: 18px;
+    margin: 40px 0 0 5px;
+  }
+}
+
+.close-button{
+  position: fixed;
+  left: $left;
+  top: 50%;
+  z-index: 500;
+  width: 25px;
+  height: 100px;
+  background-color: #f8f9fa!important;
+  box-shadow: #333330 0.5px 0 1px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  img{
+    width: 18px;
+    height: 18px;
+    margin: 40px 0 0 5px;
+  }
 }

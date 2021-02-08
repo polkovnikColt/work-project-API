@@ -1,0 +1,52 @@
+@import "src/component/mainStyles";
+
+$arrow-width: 15px;
+.news-title {
+  @include font-medium;
+}
+
+.date {
+  @include font-small;
+}
+
+.news-block {
+  overflow-y: scroll;
+  @include font-small;
+}
+
+.preview {
+  width: 30%;
+  height: 150px;
+  float: right;
+  border-radius: 15px;
+}
+
+.one-news {
+  z-index: 100;
+
+  &:hover {
+    transition: 0.3s;
+    box-shadow: #333330 0 1px 5px;
+  }
+}
+
+.arrow {
+  width: $arrow-width;
+  height: 15px;
+  margin: 0 auto;
+}
+
+.w-25px {
+  width: $arrow-width;
+}
+
+.custom-col-sm-12 {
+
+}
+
+@media (max-width: 576px) {
+  .custom-col-sm-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}

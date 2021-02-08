@@ -1,24 +1,30 @@
 import React from "react";
-import MainPage from './component/pages/main/mainPage';
 import {HashRouter, Switch, Route} from "react-router-dom";
-import Navbar from "./component/navbar/Navbar";
+import "../src/component/mainStyles.scss"
+import NavigationBar from "./component/navbar/Navbar";
 import LeftSidebar from "./component/sidebars/leftSidebar";
+import MainPage from './component/pages/main/mainPage';
+import NewsPage from "./component/pages/news/newsPage";
+import AboutPage from "./component/pages/about/aboutPage";
+import AdminPage from "./component/pages/admin/adminPages";
+
 
 
 function App() {
     return (
-        <div className="container-fluid p-0">
+        <div className="container-fluid w-100 p-0 ">
         <HashRouter>
-            <Navbar/>
-                <div className="row">
+            <NavigationBar/>
+                <div className="row w-100 m-0 ">
                     <LeftSidebar/>
                     <Switch>
                         <Route path={'/'} component={MainPage} exact = {true}/>
-                        <Route path={'/news'} component={null}/>
-                        <Route path={'/about'} component={null}/>
+                        <Route path={'/news'} component={NewsPage}/>
+                        <Route path={'/about'} component={AboutPage}/>
                         <Route path={'/contact'} component={null}/>
                         <Route path={'/world'} component={null}/>
                         <Route path={'/seminars'} component={null}/>
+                        <Route path={'/admins'} component={AdminPage}/>
                     </Switch>
                 </div>
         </HashRouter>
