@@ -2,10 +2,21 @@
 
 $font-color: gray;
 $link-color: #333330;
-$left: 30%;
+$left: 50%;
 
 .title {
-  @include font-medium;
+  @include font-big;
+}
+
+.preview-badge{
+  position: absolute;
+  left:300px;
+  padding: 0.6%;
+  border-radius: 8px;
+  background-color: black;
+  opacity: 0.6;
+  color: #fffff3;
+  font-size: 13px;
 }
 
 .box-shadow {
@@ -25,11 +36,20 @@ $left: 30%;
   color: $font-color;
   @include font-small;
 
+  hr{
+    height: 3.5px;
+  }
+
   &:hover, focus {
     color: $link-color;
     transition: 0.1s;
     text-decoration: none;
+    font-weight: bold;
   }
+}
+
+.open-panel{
+  transition: margin .5s;
 }
 
 .bar {

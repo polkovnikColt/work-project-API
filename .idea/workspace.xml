@@ -55,11 +55,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\WebstormProjects\api-site-project\client\src\component\pages\main\additional" />
+      <recent name="C:\Users\User\WebstormProjects\api-site-project\client\src\component\pages\admin\additional" />
       <recent name="C:\Users\User\WebstormProjects\api-site-project\server" />
       <recent name="C:\Users\User\WebstormProjects\api-site-project\server\routes" />
       <recent name="C:\Users\User\WebstormProjects\api-site-project\client\src\component\sidebars" />
-      <recent name="C:\Users\User\WebstormProjects\api-site-project\client\src\component\pages\main" />
-      <recent name="C:\Users\User\WebstormProjects\api-site-project\client\src\component\pages" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -73,7 +73,8 @@
       <workItem from="1611834489039" duration="2305000" />
       <workItem from="1611837479426" duration="27574000" />
       <workItem from="1612105629977" duration="38236000" />
-      <workItem from="1612340947846" duration="35621000" />
+      <workItem from="1612340947846" duration="52435000" />
+      <workItem from="1613043854769" duration="8141000" />
     </task>
     <servers />
   </component>
@@ -101,10 +102,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="310" y="139" key="EditFileWatcherDialog/0.0.1280.720@0.0.1280.720" timestamp="1611838406865" />
-    <state x="421" y="116" key="FileChooserDialogImpl" timestamp="1611840014552">
+    <state x="421" y="116" key="FileChooserDialogImpl" timestamp="1612871277586">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="421" y="116" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1611840014552" />
+    <state x="421" y="116" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1612871277586" />
     <state x="111" y="186" width="587" height="534" key="find.popup" timestamp="1612467253455">
       <screen x="0" y="0" width="1280" height="720" />
     </state>

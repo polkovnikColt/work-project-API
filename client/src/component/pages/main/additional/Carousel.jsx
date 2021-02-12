@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import './mainPageStyles.scss';
-import api from "../../../images/api.jpg";
-import kiev1 from '../../../images/kiev1 .jpg'
-import kiev2 from '../../../images/kiev2.jpg'
+import '../mainPageStyles.scss';
+import api from "../../../../images/api.jpg";
+import kiev1 from '../../../../images/kiev1 .jpg'
+import kiev2 from '../../../../images/kiev2.jpg'
 import {Carousel} from "react-bootstrap";
 
 

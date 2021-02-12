@@ -9,22 +9,31 @@ export default function OneNews({news}) {
 
     const [open, setOpen] = useState(false);
     const [preview, setPreview] = useState(false);
+    const [width, setWidth] = useState(window.innerWidth);
 
-    if (preview) {
+    useEffect(() => {
+        function handleResize() {
+            setWidth(window.innerWidth);
+        }
+
+        window.addEventListener('resize', handleResize);
+    });
+
+    if (preview || width < 600) {
         return (
             <div onClick={() => setPreview(prev => !prev)}
                  className="card m-2 text-justify one-news">
                 <div className="card-header news-title ">
                     {news.title}
-                    <h6 className="ml-auto p-3 float-right">
+                    <h6 className="ml-auto p-1 float-right">
                         {news.date}
                     </h6>
                 </div>
                 <div className="card-body">
-                    {<img
+                    {news.photo ? <img
                         src={news.photo}
                         alt="full"
-                        className="w-100"/>}
+                        className="w-100"/> : null}
                     <p className="card-text">
                         {news.body}</p>
                 </div>
@@ -38,11 +47,11 @@ export default function OneNews({news}) {
              onClick={() => setOpen(prev => !prev)}>
             <div className="card-header news-title ">
                 {news.title}
-                <h6 className="ml-auto p-3 float-right date">{news.date}</h6>
+                <h6 className="ml-auto p-3 float-right">{news.date}</h6>
             </div>
             <div className="card-body">
                 {news.photo ?
-                    <img
+                    <div><img
                         onClick={(e) =>
                             setPreview(prev => {
                                 e.stopPropagation();
@@ -50,7 +59,12 @@ export default function OneNews({news}) {
                             })}
                         src={news.photo}
                         alt="preview"
-                        className="preview p-2"/>
+                        className="preview p-2 position-relative"/>
+                    {/*{preview ?*/}
+                    {/*    <span className="badge-dark">Зменшити</span>*/}
+                    {/*    :*/}
+                    {/*    <span className="badge-dark">Збільшити</span> }*/}
+                    </div>
                     : null}
                 <p className="card-text p-3">
                     {open ? news.body : cut(news.body)}  </p>
