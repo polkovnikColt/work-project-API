@@ -1,4 +1,5 @@
 $font-color: #333330;
+$primary-color : #313860;
 $font-family: "Bookman Old Style";
 
 .max-height{
@@ -34,24 +35,21 @@ $font-family: "Bookman Old Style";
 }
 
 @mixin font-medium-white {
-  font-size: 25px;
+  font-size: 23px;
   font-weight: bold;
   font-family: $font-family;
   color: #fffff3;
-  display: inline-block;
-  padding-top: .3125rem;
-  padding-bottom: .3125rem;
   margin-right: 1rem;
   line-height: inherit;
   white-space: nowrap;
   @media screen and (max-width: 600px){
-    font-size: 17px;
+    font-size: 15px;
   }
   @media screen and (max-width: 450px){
-    font-size: 13px;
+    font-size: 11px;
   }
   @media screen and (max-width: 361px){
-    font-size: 11px;
+    font-size: 9px;
   }
 }
 
@@ -59,6 +57,46 @@ $font-family: "Bookman Old Style";
   font-size: 18px;
   font-family: $font-family;
   color: $font-color;
+  @media screen and (min-width: 2560px){
+    font-size: 35px;
+    padding: 5%;
+  }
+  @media screen and (max-width: 560px){
+    font-size: 16px;
+  }
+  @media screen and (max-width: 360px){
+    font-size: 13px;
+  }
+}
+@mixin font-small-inherit{
+  font-size: 18px;
+  font-family: $font-family;
+  color: whitesmoke;
+  @media screen and (min-width: 2560px){
+    font-size: 35px;
+    padding: 5%;
+  }
+  @media screen and (max-width: 560px){
+    font-size: 16px;
+  }
+  @media screen and (max-width: 360px){
+    font-size: 13px;
+  }
+}
+
+.bg-main{
+  background-color: $primary-color;
+  color: #fffff3;
+}
+
+.border-top-rounder{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+@mixin font-small-primary-colored{
+  font-size: 18px;
+  font-family: $font-family;
   @media screen and (min-width: 2560px){
     font-size: 35px;
     padding: 5%;

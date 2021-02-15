@@ -69,7 +69,7 @@ export default function LeftSidebar() {
     return (
         <div
             style={{"min-height": window.innerHeight - 65 + "px"}}
-            className="col-3 bg-light text-center box-shadow">
+            className="position-sticky col-3 bg-light text-center box-shadow">
             <div
                 className="title py-3">
                 Розділи

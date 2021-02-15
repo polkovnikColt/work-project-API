@@ -23,6 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76484e9e-fdfa-4fda-b897-f6fd1bc18f29" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/server/schemas/projectSchema.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +50,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../crew-visicom" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../backend-test" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
@@ -74,7 +75,9 @@
       <workItem from="1611837479426" duration="27574000" />
       <workItem from="1612105629977" duration="38236000" />
       <workItem from="1612340947846" duration="52435000" />
-      <workItem from="1613043854769" duration="8141000" />
+      <workItem from="1613043854769" duration="18684000" />
+      <workItem from="1613211543555" duration="11245000" />
+      <workItem from="1613381915323" duration="3411000" />
     </task>
     <servers />
   </component>
@@ -94,29 +97,33 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="371" y="108" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1612341021801">
+    <state x="414" y="163" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1613129891816">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="371" y="108" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.720@0.0.1280.720" timestamp="1612341021801" />
+    <state x="414" y="163" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.720@0.0.1280.720" timestamp="1613129891816" />
+    <state x="371" y="108" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1613139009486">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="371" y="108" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.720@0.0.1280.720" timestamp="1613139009486" />
     <state x="310" y="139" key="EditFileWatcherDialog" timestamp="1611838406865">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="310" y="139" key="EditFileWatcherDialog/0.0.1280.720@0.0.1280.720" timestamp="1611838406865" />
-    <state x="421" y="116" key="FileChooserDialogImpl" timestamp="1612871277586">
+    <state x="421" y="116" key="FileChooserDialogImpl" timestamp="1613133810972">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="421" y="116" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1612871277586" />
-    <state x="111" y="186" width="587" height="534" key="find.popup" timestamp="1612467253455">
+    <state x="421" y="116" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1613133810972" />
+    <state x="111" y="186" width="587" height="534" key="find.popup" timestamp="1613132459131">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="111" y="186" width="587" height="534" key="find.popup/0.0.1280.720@0.0.1280.720" timestamp="1612467253455" />
-    <state x="297" y="161" key="run.anything.popup" timestamp="1612352883942">
+    <state x="111" y="186" width="587" height="534" key="find.popup/0.0.1280.720@0.0.1280.720" timestamp="1613132459131" />
+    <state x="297" y="161" key="run.anything.popup" timestamp="1613213983260">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="297" y="161" key="run.anything.popup/0.0.1280.720@0.0.1280.720" timestamp="1612352883942" />
-    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1612295396277">
+    <state x="297" y="161" key="run.anything.popup/0.0.1280.720@0.0.1280.720" timestamp="1613213983260" />
+    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1613131531308">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1280.720@0.0.1280.720" timestamp="1612295396277" />
+    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1280.720@0.0.1280.720" timestamp="1613131531308" />
   </component>
 </project>

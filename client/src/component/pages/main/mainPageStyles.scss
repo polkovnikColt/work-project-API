@@ -1,11 +1,16 @@
 @import "src/component/mainStyles";
 
-.image-width {
+.responsive-width {
   width: 800px;
-  height: 300px;
+  height: 350px;
 }
 
-.carousel-width {
+.responsive-font-width {
+  width: 800px;
+  height: auto;
+}
+
+.container-width {
   width: 750px;
 }
 
@@ -13,97 +18,186 @@
   @include font-medium;
 }
 
-.custom-link{
-  @include font-small;
-  color: #313860;
+span {
+  @include font-small-primary-colored;
+}
+
+.one-project {
+  @include font-small-primary-colored;
+}
+
+
+video {
+  background-image: linear-gradient($primary-color, $primary-color);
+  background-position: 100% 0%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size .3s;
+
+  &:hover {
+    color: inherit;
+    text-decoration: none;
+    background-size: 100% 2px;
+  }
+
+  &:active {
+    color: inherit;
+    text-decoration: none;
+    background-size: 100% 2px;
+  }
+}
+
+
+.custom-link {
+  @include font-small-inherit;
   font-weight: bold;
   background-image: linear-gradient(currentColor, currentColor);
   background-position: 0% 100%;
   background-repeat: no-repeat;
   background-size: 0% 2px;
   transition: background-size .3s;
-  &:hover{
-    color:inherit;
+
+  &:hover {
+    color: inherit;
     text-decoration: none;
     background-size: 100% 2px;
   }
 }
 
 @media screen and (min-width: 2560px) {
-  .image-width {
+  .responsive-width {
     width: 1500px;
     height: 500px;
   }
-  .carousel-width {
+  .container-width {
     width: 1500px;
+  }
+  .responsive-font-width {
+    width: 1500px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 1450px) {
+  .responsive-width {
+    width: 700px;
+    height: 400px;
+    padding-top: 3%;
+  }
+  .container-width {
+    width: 700px;
+  }
+  .responsive-font-width {
+    width: 700px;
+    height: auto;
   }
 }
 
 @media screen and (max-width: 1050px) {
-  .image-width {
+  .responsive-width {
     width: 700px;
     height: 300px;
+    padding-top: 4%;
   }
-  .carousel-width {
+  .responsive-font-width {
+    width: 700px;
+    height: auto;
+    padding-top: 4%;
+  }
+  .container-width {
     width: 700px;
   }
 }
 
 @media screen and (max-width: 920px) {
-  .image-width {
+  .responsive-width {
     width: 550px;
-    height: 300px;
+    height: 350px;
   }
-  .carousel-width {
+  .container-width {
     width: 550px;
+  }
+  .responsive-font-width {
+    width: 550px;
+    height: auto;
   }
 }
 
+.line {
+  margin: 2px 0;
+  width: 25px;
+  height: 4px;
+  background-color: whitesmoke;
+}
+
 @media screen and (max-width: 730px) {
-  .image-width {
+  .responsive-width {
     width: 500px;
     height: 300px;
   }
-  .carousel-width {
+  .container-width {
     width: 500px;
+  }
+  .responsive-font-width {
+    width: 500px;
+    height: auto;
   }
 }
+
 @media screen and (max-width: 690px) {
-  .image-width {
-    width: 450px;
-    height: 300px;
+  .responsive-width {
+    width: 500px;
+    height: 250px;
   }
-  .carousel-width {
-    width: 400px;
+  .container-width {
+    width: 500px;
+  }
+  .responsive-font-width {
+    width: 500px;
+    height: auto;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .image-width {
+  .responsive-width {
     margin: 0 auto;
     width: 380px;
     height: 270px;
   }
-  .carousel-width {
+  .container-width {
     width: 360px;
   }
+  .responsive-font-width {
+    margin: 0 auto;
+    width: 380px;
+    height: auto;
+  }
 }
+
 @media screen and (max-width: 460px) {
-  .image-width {
-    width: 320px;
+  .responsive-width {
+    width: 350px;
     height: 240px;
   }
-  .carousel-width {
+  .container-width {
     width: 350px;
+  }
+  .responsive-font-width {
+    width: 350px;
+    height: auto;
   }
 }
 
 @media screen and (max-width: 380px) {
-  .image-width {
-    width: 300px;
-    height: 240px;
+  .responsive-width {
+    width: 260px;
+    height: 190px;
   }
-  .carousel-width {
-    width: 270px;
+  .container-width {
+    width: 260px;
+  }
+  .responsive-font-width {
+    width: 260px;
+    height: auto;
   }
 }

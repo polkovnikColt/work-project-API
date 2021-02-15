@@ -4,29 +4,18 @@ import "./navbarStyles.scss"
 
 export default function ModalWindow() {
     const [show, setShow] = useState(false);
-    const [width, setWidth] = useState(0);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    useEffect(() => {
-        function handleResize(){
-            setWidth(window.innerWidth);
-        }
-
-        window.addEventListener('resize',handleResize);
-    })
-
     return (
         <>
-            { width < 400 ? <span>+</span>:
-
-                <Button
+            <Button
                     className="button-font"
                     variant="outline-primary"
                     onClick={handleShow}>
                 Вхід
-            </Button>}
+            </Button>
 
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>

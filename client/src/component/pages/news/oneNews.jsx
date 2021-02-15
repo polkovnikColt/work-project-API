@@ -67,7 +67,7 @@ export default function OneNews({news}) {
                     </div>
                     : null}
                 <p className="card-text p-3">
-                    {open ? news.body : cut(news.body)}  </p>
+                    {open ? news.body : cut(news.body,news.photo)}  </p>
             </div>
             <div className="w-100 ">
                 <div className="mx-auto w-25px"><img

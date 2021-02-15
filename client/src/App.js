@@ -6,6 +6,7 @@ import LeftSidebar from "./component/sidebars/leftSidebar";
 import MainPage from './component/pages/main/mainPage';
 import NewsPage from "./component/pages/news/newsPage";
 import AboutPage from "./component/pages/about/aboutPage";
+import ProtectedRoute from "./ProtectedRoute";
 import AdminPage from "./component/pages/admin/adminPages";
 
 
@@ -24,7 +25,9 @@ function App() {
                         <Route path={'/contact'} component={null}/>
                         <Route path={'/world'} component={null}/>
                         <Route path={'/seminars'} component={null}/>
-                        <Route path={'/admins'} component={AdminPage}/>
+                        <ProtectedRoute
+                            path = {'/admins'}
+                            isAuth={true}/>
                     </Switch>
                 </div>
         </HashRouter>
