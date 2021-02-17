@@ -1,17 +1,37 @@
 @import "src/component/mainStyles";
+$arrow-width: 15px;
 
 @mixin badge-photo {
   position: absolute;
-  text-align: center;
-  background-color: #333330;
-  opacity: 0.7;
-  color: #fffff3;
-  padding: 3px;
+  text-align: right;
+  background-color: #fffff3;
+  opacity: 0.89;
+  padding: 10px;
   border-radius: 10px;
   z-index: 1000;
 }
 
-$arrow-width: 15px;
+.badge-photo-open {
+  @include badge-photo;
+  right: 30px;
+  top: 100px;
+  img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.badge-photo-close {
+  @include badge-photo;
+  right: 35px;
+  top: 120px;
+
+  img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
 .news-title {
   @include font-medium;
 }
@@ -47,20 +67,6 @@ $arrow-width: 15px;
   margin: 0 auto;
 }
 
-.badge-photo-open {
-  @include badge-photo;
-  right: 30px;
-  top: 100px;
-  width: 20%;
-  height: 30px;
-}
-.badge-photo-close{
-  @include badge-photo;
-  width: 22%;
-  height: 28px;
-  right: 35px;
-  top: 120px;
-}
 
 .w-25px {
   width: $arrow-width;

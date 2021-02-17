@@ -37,8 +37,7 @@ $left: 50%;
 
 .link {
   display: block;
-  color: $font-color;
-  @include font-small;
+  @include font-medium-no-bold;
 
   hr{
     height: 3.5px;
@@ -52,16 +51,12 @@ $left: 50%;
   }
 }
 
-.open-panel{
-}
-
 .bar {
   position: fixed;
   top: 0;
   z-index: 10000;
   width: $left;
 }
-
 
 .open-button {
   position: fixed;

@@ -47,7 +47,7 @@ export default function MainPageNav({setProjectByName}) {
                 <div>
                     {mainLinks.map(item =>
                         <MainLink
-                        key={item}
+                        key={Math.random()}
                         title={item}
                         setProjectByName = {setProjectByName}
                         open={false}/>)}

@@ -1,0 +1,11 @@
+@import "src/component/mainStyles";
+.souvenir{
+  width: 100%;
+  img{
+    height: 200px;
+  }
+  @media screen and(min-width: 1440px){
+    width: 50%;
+    box-sizing: border-box;
+  }
+}

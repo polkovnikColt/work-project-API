@@ -4,12 +4,16 @@ import {cut} from './newsService';
 import up from '../../../../images/up-arrow.svg';
 import down from '../../../../images/arrow-down.svg';
 import newspaper from '../../../../images/newspaper.svg';
+import zoomOut from '../../../../images/socialmedia/magnifying-glass.svg';
+import zoomIn from '../../../../images/zoom-in.svg';
 
 export default function OneNews({news}) {
 
     const [open, setOpen] = useState(false);
     const [preview, setPreview] = useState(false);
     const [width, setWidth] = useState(window.innerWidth);
+
+    console.log(`Open: ${open}, preview ${preview}`)
 
     useEffect(() => {
         function handleResize() {
@@ -21,9 +25,11 @@ export default function OneNews({news}) {
 
     if (preview || width < 600) {
         return (
-            <div onClick={() => setPreview(prev => !prev)}
+            <div onClick={(e) => setPreview(prev => {
+                e.stopPropagation();
+                return !prev
+            })}
                  className="card m-2 text-justify one-news">
-
                 <div className="card-header news-title ">
                     <img src={newspaper} alt="newspaper" className="news-logo"/>
                     {news.title}
@@ -36,7 +42,9 @@ export default function OneNews({news}) {
                             src={news.photo}
                             alt="full"
                             className="w-100"/>
-                            <span className="badge-photo-open">Зменшити</span></>
+                            <span className="badge-photo-open">
+                                {width > 600 ? <img src={zoomOut} alt=""/> : null}
+                            </span></>
                         : null}
                     <p className="card-text">
                         {news.body}</p>
@@ -48,7 +56,9 @@ export default function OneNews({news}) {
     return (
         <div style={{"height": open ? "auto" : "280px"}}
              className="card m-2 text-justify one-news"
-             onClick={() => setOpen(prev => !prev)}>
+             onClick={(e) => setOpen(prev =>{
+                 e.stopPropagation();
+                 return !prev})}>
             <div className="card-header news-title ">
                 <img src={newspaper} alt="newspaper" className="news-logo"/>
                 {news.title}
@@ -65,7 +75,9 @@ export default function OneNews({news}) {
                         src={news.photo}
                         alt="preview"
                         className="preview p-2 position-relative"/>
-                        <span className="badge-photo-close">Збільшити</span>
+                        <span className="badge-photo-close">
+                            <img src={zoomIn} alt=""/>
+                        </span>
                     </div>
                     : null}
                 <p className="card-text p-3">

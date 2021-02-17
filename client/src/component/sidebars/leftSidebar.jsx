@@ -9,7 +9,7 @@ let links =
         {title: "Новини", href: "/news", subtitle: []},
         {title: "Про нас", href: "/about", subtitle: []},
         {title: "Міжнародна співпраця", href: "/world", subtitle: []},
-        {title: "Конференції та семінари", href: "/seminars", subtitle: []},
+        {title: "Конференції та семінари", href: "/conference", subtitle: []},
         {title: "Сувеніри", href: "/souvenirs", subtitle: []}]
 
 //TODO create animation of sliding
@@ -51,9 +51,11 @@ export default function LeftSidebar() {
                     className="title py-3">
                     Розділи
                 </div>
+                <div className="my-auto">
                 {links.map((item) => {
-                    return <NavLink item={item} key={item}/>
+                    return <NavLink item={item} key={Math.random()}/>
                 })}
+                </div>
                 <div
                     onClick={() => {
                         setArrow(prev => !prev)
@@ -68,14 +70,16 @@ export default function LeftSidebar() {
     return (
         <div
             style={{"min-height": window.innerHeight - 65 + "px"}}
-            className="position-sticky col-3 bg-light text-center box-shadow">
+            className="col-3 bg-light text-center box-shadow">
             <div
                 className="title py-3">
                 Розділи
             </div>
+            <div className="my-auto">
             {links.map(item =>
                 <NavLink item={item} key={item}/>
             )}
+            </div>
         </div>
     )
 }

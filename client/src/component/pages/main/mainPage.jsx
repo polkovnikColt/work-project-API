@@ -1,7 +1,7 @@
 import React, {useState, useRef} from 'react';
 import './mainPageStyles.scss'
 import MainPageNav from "./additional/MainPageNav";
-import OneProject from "./additional/OneProject";
+import OneProject from "../additionalComponents/OneProject";
 import previewVideo from "../../../images/Autumn - 18420.mp4";
 import {getProjectByName, getProjects} from "./additional/service";
 
@@ -19,7 +19,6 @@ export default function MainPage() {
     }
 
     const setProjectByName = (name) => {
-        console.log(getProjectByName(name));
         setProject(getProjectByName(name));
     }
 

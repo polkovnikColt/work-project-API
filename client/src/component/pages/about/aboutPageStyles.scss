@@ -1,5 +1,42 @@
 @import "src/component/mainStyles";
 
-.text{
+.text {
   @include font-medium;
+}
+
+.table-item {
+  @include font-small;
+}
+
+.table-title {
+  @include font-small;
+}
+
+.media-icon {
+  height: 30px;
+  width: 30px;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+@media screen and (max-width: 1024px){
+  .media-icon {
+    height: 70px;
+    width: 70px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .media-icon {
+    height: 50px;
+    width: 50px;
+  }
+}
+@media screen and (max-width: 320px){
+  .media-icon {
+    height: 35px;
+    width: 35px;
+  }
 }

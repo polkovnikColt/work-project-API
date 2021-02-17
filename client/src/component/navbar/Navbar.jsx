@@ -1,5 +1,4 @@
-import React, {useEffect, useState} from 'react';
-import {Link} from 'react-router-dom';
+import React from 'react';
 import './navbarStyles.scss';
 import logo from '../../images/logo crop.png';
 import ModalWindow from "./Modal";

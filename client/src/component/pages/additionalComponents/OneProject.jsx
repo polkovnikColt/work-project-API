@@ -1,8 +1,7 @@
 import React from 'react';
-import Carousel from "./Carousel";
+import Carousel from "../main/additional/Carousel";
 
 export default function OneProject({photos, content, links}) {
-    console.log(photos)
     return (
         <div className="one-project">
             {photos.length > 1 ?

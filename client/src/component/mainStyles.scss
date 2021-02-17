@@ -6,13 +6,24 @@ $font-family: "Bookman Old Style";
   max-height: 700px;
 }
 
+.bg-main{
+  background-color: $primary-color;
+  color: #fffff3;
+}
+
 @mixin font-big {
   font-size: 30px;
   font-weight: bold;
   font-family: $font-family;
   color: $font-color;
+  @media screen and (max-width: 2560px){
+    font-size: 70px;
+  }
+  @media screen and (max-width: 1440px){
+    font-size: 50px;
+  }
   @media screen and (max-width: 560px){
-    font-size: 20px;
+    font-size: 30px;
   }
 }
 @mixin font-medium {
@@ -21,8 +32,41 @@ $font-family: "Bookman Old Style";
   font-family: $font-family;
   color: $font-color;
 
-  @media screen and (min-width: 2560px){
+  @media screen and (max-width: 2560px){
     font-size: 45px;
+    padding: 5%;
+  }
+  @media screen and (max-width: 1440px){
+    font-size: 45px;
+    padding: 5%;
+  }
+  @media screen and (max-width: 1024px){
+    font-size: 40px;
+    padding: 5%;
+  }
+
+  @media screen and (max-width: 600px){
+    font-size: 17px;
+  }
+  @media screen and (max-width: 361px){
+    font-size: 14px;
+  }
+}
+@mixin font-medium-no-bold {
+  font-size: 25px;
+  font-family: $font-family;
+  color: $font-color;
+
+  @media screen and (max-width: 2560px){
+    font-size: 45px;
+    padding: 5%;
+  }
+  @media screen and (max-width: 1440px){
+    font-size: 45px;
+    padding: 5%;
+  }
+  @media screen and (max-width: 1024px){
+    font-size: 40px;
     padding: 5%;
   }
 
@@ -42,10 +86,22 @@ $font-family: "Bookman Old Style";
   margin-right: 1rem;
   line-height: inherit;
   white-space: nowrap;
+  @media screen and (max-width: 2560px){
+    font-size: 39px;
+  }
+  @media screen and (max-width: 1440px){
+    font-size: 26px;
+  }
+  @media screen and (max-width: 700px){
+    font-size: 21px;
+  }
   @media screen and (max-width: 600px){
     font-size: 15px;
   }
   @media screen and (max-width: 450px){
+    font-size: 13px;
+  }
+  @media screen and (max-width: 380px){
     font-size: 11px;
   }
   @media screen and (max-width: 361px){
@@ -62,7 +118,11 @@ $font-family: "Bookman Old Style";
     padding: 5%;
   }
   @media screen and (min-width: 1440px){
-    font-size: 26px;
+    font-size: 30px;
+    padding:0.7%;
+  }
+  @media screen and (min-width: 1024px){
+    font-size: 23px;
     padding:0.7%;
   }
   @media screen and (max-width: 560px){
@@ -92,16 +152,6 @@ $font-family: "Bookman Old Style";
   }
 }
 
-.bg-main{
-  background-color: $primary-color;
-  color: #fffff3;
-}
-
-.border-top-rounder{
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
 @mixin font-small-primary-colored{
   font-size: 18px;
   font-family: $font-family;
@@ -118,4 +168,162 @@ $font-family: "Bookman Old Style";
 }
 
 
+.responsive-width {
+  width: 800px;
+  height: 350px;
+}
 
+.responsive-font-width {
+  width: 800px;
+  height: auto;
+  @include font-small;
+}
+
+.container-width {
+  width: 750px;
+}
+
+
+@media screen and (min-width: 2560px) {
+  .responsive-width {
+    width: 1500px;
+    height: 500px;
+  }
+  .container-width {
+    width: 1500px;
+  }
+  .responsive-font-width {
+    width: 1500px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .responsive-width {
+    width: 800px;
+    height: 450px;
+    padding-top: 3%;
+  }
+  .container-width {
+    width: 800px;
+  }
+  .responsive-font-width {
+    width: 800px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .responsive-width {
+    width: 700px;
+    height: 300px;
+    padding-top: 4%;
+  }
+  .responsive-font-width {
+    width: 700px;
+    height: auto;
+    padding-top: 4%;
+  }
+  .container-width {
+    width: 700px;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .responsive-width {
+    width: 550px;
+    height: 350px;
+  }
+  .container-width {
+    width: 550px;
+  }
+  .responsive-font-width {
+    width: 550px;
+    height: auto;
+  }
+}
+
+.line{
+  margin: 2px 0;
+  width: 25px;
+  height: 4px;
+  background-color: whitesmoke;
+}
+
+.burger-menu{
+  position: sticky;
+  left: 90%;
+  margin-bottom: auto;
+}
+
+@media screen and (max-width: 730px) {
+  .responsive-width {
+    width: 500px;
+    height: 300px;
+  }
+  .container-width {
+    width: 500px;
+  }
+  .responsive-font-width {
+    width: 500px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .responsive-width {
+    width: 500px;
+    height: 250px;
+  }
+  .container-width {
+    width: 500px;
+  }
+  .responsive-font-width {
+    width: 500px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .responsive-width {
+    margin: 0 auto;
+    width: 380px;
+    height: 270px;
+  }
+  .container-width {
+    width: 360px;
+  }
+  .responsive-font-width {
+    margin: 0 auto;
+    width: 380px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .responsive-width {
+    width: 350px;
+    height: 240px;
+  }
+  .container-width {
+    width: 350px;
+  }
+  .responsive-font-width {
+    width: 350px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .responsive-width {
+    width: 260px;
+    height: 190px;
+  }
+  .container-width {
+    width: 260px;
+  }
+  .responsive-font-width {
+    width: 260px;
+    height: auto;
+  }
+}

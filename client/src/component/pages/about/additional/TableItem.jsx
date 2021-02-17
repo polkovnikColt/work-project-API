@@ -1,12 +1,13 @@
 import React from 'react';
+import '../aboutPageStyles.scss'
 
-export default function TableItem(){
+export default function TableItem({person,index}){
     return(
-        <tr>
-            <td>1</td>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+        <tr className="table-item">
+            <td>{index}</td>
+            <td>{person.name}</td>
+            <td>{person.surname}</td>
+            <td>{person.work}</td>
         </tr>
     )
 }

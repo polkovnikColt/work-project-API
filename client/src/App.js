@@ -7,7 +7,7 @@ import MainPage from './component/pages/main/mainPage';
 import NewsPage from "./component/pages/news/newsPage";
 import AboutPage from "./component/pages/about/aboutPage";
 import ProtectedRoute from "./ProtectedRoute";
-import AdminPage from "./component/pages/admin/adminPages";
+import ConferencePage from "./component/pages/conference/conferencePage";
 import SouvenirsPage from "./component/pages/souvenirs/souvenirsPage";
 
 
@@ -24,7 +24,7 @@ function App() {
                         <Route path={'/news'} component={NewsPage}/>
                         <Route path={'/about'} component={AboutPage}/>
                         <Route path={'/world'} component={null}/>
-                        <Route path={'/seminars'} component={null}/>
+                        <Route path={'/conference'} component={ConferencePage}/>
                         <Route path={'/souvenirs'} component={SouvenirsPage}/>
                         <ProtectedRoute
                             path = {'/admins'}
