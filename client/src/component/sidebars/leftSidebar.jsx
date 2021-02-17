@@ -2,16 +2,17 @@ import React, {useState, useEffect} from 'react'
 import "./leftSidebar.scss"
 import left from '../../images/iconmonstr-arrow-25.svg'
 import right from '../../images/iconmonstr-arrow-64.svg'
-import NavLink from "./NavLink";
+import NavLink from "./additional/NavLink";
 
 let links =
     [{title: "Головна", href: "/", subtitle: []},
         {title: "Новини", href: "/news", subtitle: []},
         {title: "Про нас", href: "/about", subtitle: []},
         {title: "Міжнародна співпраця", href: "/world", subtitle: []},
-        {title: "Конференцій, семінари", href: "/seminars", subtitle: []},
+        {title: "Конференції та семінари", href: "/seminars", subtitle: []},
         {title: "Сувеніри", href: "/souvenirs", subtitle: []}]
 
+//TODO create animation of sliding
 export default function LeftSidebar() {
 
     const [width, setWidth] = useState(window.innerWidth);
@@ -50,17 +51,15 @@ export default function LeftSidebar() {
                     className="title py-3">
                     Розділи
                 </div>
-                {links.map(item =>
-                    <NavLink item={item} key={item}/>
-                )}
+                {links.map((item) => {
+                    return <NavLink item={item} key={item}/>
+                })}
                 <div
                     onClick={() => {
-                        setVisible(false);
                         setArrow(prev => !prev)
-                    }
-                    }
-                    className="close-button"
-                ><img src={arrow ? right : left} alt=""/>
+                        setVisible(false)}}
+                    className="close-button">
+                    <img src={arrow ? right : left} alt=""/>
                 </div>
             </div>
         )

@@ -8,6 +8,7 @@ import NewsPage from "./component/pages/news/newsPage";
 import AboutPage from "./component/pages/about/aboutPage";
 import ProtectedRoute from "./ProtectedRoute";
 import AdminPage from "./component/pages/admin/adminPages";
+import SouvenirsPage from "./component/pages/souvenirs/souvenirsPage";
 
 
 
@@ -22,9 +23,9 @@ function App() {
                         <Route path={'/'} component={MainPage} exact = {true}/>
                         <Route path={'/news'} component={NewsPage}/>
                         <Route path={'/about'} component={AboutPage}/>
-                        <Route path={'/contact'} component={null}/>
                         <Route path={'/world'} component={null}/>
                         <Route path={'/seminars'} component={null}/>
+                        <Route path={'/souvenirs'} component={SouvenirsPage}/>
                         <ProtectedRoute
                             path = {'/admins'}
                             isAuth={true}/>

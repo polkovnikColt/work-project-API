@@ -30,6 +30,10 @@ $left: 50%;
 .link-div {
   height: auto;
 }
+.arrow-sidebar{
+  width: 15px;
+  height: 15px;
+}
 
 .link {
   display: block;
@@ -49,7 +53,6 @@ $left: 50%;
 }
 
 .open-panel{
-  transition: margin .5s;
 }
 
 .bar {

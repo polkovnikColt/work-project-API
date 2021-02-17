@@ -61,6 +61,10 @@ $font-family: "Bookman Old Style";
     font-size: 35px;
     padding: 5%;
   }
+  @media screen and (min-width: 1440px){
+    font-size: 26px;
+    padding:0.7%;
+  }
   @media screen and (max-width: 560px){
     font-size: 16px;
   }
@@ -75,6 +79,10 @@ $font-family: "Bookman Old Style";
   @media screen and (min-width: 2560px){
     font-size: 35px;
     padding: 5%;
+  }
+  @media screen and (min-width: 1440px){
+    font-size: 26px;
+    padding: 0.7%;
   }
   @media screen and (max-width: 560px){
     font-size: 16px;

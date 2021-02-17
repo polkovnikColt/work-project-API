@@ -2,12 +2,12 @@ import React, {useState, useEffect} from 'react';
 import MainLink from "./MainLink";
 import '../mainPageStyles.scss'
 
-let mainLinks = ["Пейзажна алея", "Десятинна церква", "Головний проект","Додатковий проект"];
+let mainLinks = ["Пейзажна алея", "Десятинна церква", "Головний проект", "Додатковий проект"];
 
-export default function MainPageNav() {
+export default function MainPageNav({setProjectByName}) {
 
     const [width, setWidth] = useState(window.innerWidth);
-    const [open, setOpen] = useState(false)
+    const [open, setOpen] = useState(false);
 
     useEffect(() => {
         function handleResize() {
@@ -19,36 +19,47 @@ export default function MainPageNav() {
 
     if (open) {
         return (
-            <nav className="navbar bg-main w-100">
-
-                <div className="ml-auto">
+            <nav className="navbar bg-main w-100 my-2">
                     <div
                         onClick={() => setOpen(prevState => !prevState)}
-                        className=" mx-auto">
+                        className="burger-menu ">
                         <div className="line"></div>
                         <div className="line"></div>
                         <div className="line"></div>
                     </div>
-                    {mainLinks.map(item => <MainLink key ={item} title={item} open={false}/>)}
+                <div className="mr-auto">
+                    {mainLinks.map(item =>
+                        <MainLink
+                            setProjectByName={setProjectByName}
+                            key={item}
+                            title={item}
+                            open={true}
+                        />)}
                 </div>
             </nav>
         )
     }
 
     return (
-        <nav className="navbar bg-main w-100">
+        <nav
+            className="navbar bg-main w-100 my-2">
             {width > 500 ?
                 <div>
-                    {mainLinks.map(item => <MainLink key = {item} title={item} open={true}/>)}
+                    {mainLinks.map(item =>
+                        <MainLink
+                        key={item}
+                        title={item}
+                        setProjectByName = {setProjectByName}
+                        open={false}/>)}
                 </div>
                 :
-                <div
-                    onClick={() => setOpen(prevState => !prevState)}
-                    className="ml-auto">
-                    <div className="line"> </div>
-                    <div className="line"> </div>
-                    <div className="line"> </div>
-                </div>
+                    <div
+                        onClick={() => setOpen(prevState => !prevState)}
+                        className="burger-menu">
+                        <div className="line"></div>
+                        <div className="line"></div>
+                        <div className="line"></div>
+                    </div>
             }
         </nav>
     )

@@ -1,5 +1,11 @@
 @import "src/component/mainStyles";
 
+.control-panel{
+  background-color: $primary-color;
+  width: 55px;
+  height: 150px;
+}
+
 .responsive-width {
   width: 800px;
   height: 350px;
@@ -8,6 +14,7 @@
 .responsive-font-width {
   width: 800px;
   height: auto;
+  @include font-small;
 }
 
 .container-width {
@@ -18,8 +25,8 @@
   @include font-medium;
 }
 
-span {
-  @include font-small-primary-colored;
+.nav-slash {
+  @include font-small-inherit;
 }
 
 .one-project {
@@ -78,17 +85,17 @@ video {
   }
 }
 
-@media screen and (max-width: 1450px) {
+@media screen and (max-width: 1440px) {
   .responsive-width {
-    width: 700px;
-    height: 400px;
+    width: 800px;
+    height: 450px;
     padding-top: 3%;
   }
   .container-width {
-    width: 700px;
+    width: 800px;
   }
   .responsive-font-width {
-    width: 700px;
+    width: 800px;
     height: auto;
   }
 }
@@ -123,11 +130,17 @@ video {
   }
 }
 
-.line {
+.line{
   margin: 2px 0;
   width: 25px;
   height: 4px;
   background-color: whitesmoke;
+}
+
+.burger-menu{
+  position: sticky;
+  left: 90%;
+  margin-bottom: auto;
 }
 
 @media screen and (max-width: 730px) {

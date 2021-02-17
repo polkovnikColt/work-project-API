@@ -1,15 +1,15 @@
 import React from 'react';
 import {Table} from "react-bootstrap";
 
+const peoples = [{name:"name",surname:"surname",}]
 
 export default function AboutPage(){
 
     return(
-        <div className="col-lg-8 col-md-8 col-sm-12 mx-auto text-justify">
+        <div className="col-lg-9 col-md-9 col-sm-12">
             <div className="row w-100 m-0">
-                <div className="m-2 text-sm-center text-justify main-text">
-                    Ми - українська громадська організація, яка була створена з метою об’єднання численних громадських рухів
-                    та
+                <div className="m-2 text-justify main-text py-4">
+                    Ми - українська громадська організація, яка була створена з метою об’єднання численних громадських рухів та
                     ініціатив. Її головне завдання — це захист та збереження історичної та культурної спадщини та природного
                     середовища. У вересні 2012 року організація здобула державну реєстрацію та діє на підставі Статуту.
                 </div>

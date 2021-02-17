@@ -1,6 +1,6 @@
 import React from 'react';
 import api from '../../../images/api.jpg';
-import OneNews from "./oneNews";
+import OneNews from "./additional/oneNews";
 
 const news = [{
     title: "Новина №1",
@@ -42,6 +42,7 @@ const news = [{
         date: new Date().toLocaleDateString()
     }]
 
+//TODO create carousel for photos
 export default function NewsPage() {
     return (
         <div className="col-lg-8 col-md-7 custom-col-sm-12 p-md-2 p-lg-2 mx-auto news-block">
