@@ -13,8 +13,6 @@ export default function OneNews({news}) {
     const [preview, setPreview] = useState(false);
     const [width, setWidth] = useState(window.innerWidth);
 
-    console.log(`Open: ${open}, preview ${preview}`)
-
     useEffect(() => {
         function handleResize() {
             setWidth(window.innerWidth);
@@ -23,13 +21,20 @@ export default function OneNews({news}) {
         window.addEventListener('resize', handleResize);
     });
 
+    const handleOpen = e => {
+        e.stopPropagation();
+        setOpen( prev => !prev);
+    }
+
+    const handleSetPreview = e => {
+        e.stopPropagation();
+        setPreview(prev => !prev);
+    }
+
     if (preview || width < 600) {
         return (
-            <div onClick={(e) => setPreview(prev => {
-                e.stopPropagation();
-                return !prev
-            })}
-                 className="card m-2 text-justify one-news">
+            <div
+                className="card m-2 text-justify one-news">
                 <div className="card-header news-title ">
                     <img src={newspaper} alt="newspaper" className="news-logo"/>
                     {news.title}
@@ -42,9 +47,12 @@ export default function OneNews({news}) {
                             src={news.photo}
                             alt="full"
                             className="w-100"/>
-                            <span className="badge-photo-open">
-                                {width > 600 ? <img src={zoomOut} alt=""/> : null}
-                            </span></>
+                    {width > 600 ?
+                        <span
+                        onClick={e => handleSetPreview(e)}
+                                  className="badge-photo-open">
+                                 <img src={zoomOut} alt=""/>
+                            </span> : null} </>
                         : null}
                     <p className="card-text">
                         {news.body}</p>
@@ -55,10 +63,7 @@ export default function OneNews({news}) {
 
     return (
         <div style={{"height": open ? "auto" : "280px"}}
-             className="card m-2 text-justify one-news"
-             onClick={(e) => setOpen(prev =>{
-                 e.stopPropagation();
-                 return !prev})}>
+             className="card m-2 text-justify one-news">
             <div className="card-header news-title ">
                 <img src={newspaper} alt="newspaper" className="news-logo"/>
                 {news.title}
@@ -67,24 +72,25 @@ export default function OneNews({news}) {
             <div className="card-body">
                 {news.photo ?
                     <div><img
-                        onClick={(e) =>
-                            setPreview(prev => {
-                                e.stopPropagation();
-                                return !prev;
-                            })}
                         src={news.photo}
                         alt="preview"
                         className="preview p-2 position-relative"/>
-                        <span className="badge-photo-close">
+                        <span
+                            onClick={e => handleSetPreview(e)}
+                              className="badge-photo-close">
                             <img src={zoomIn} alt=""/>
                         </span>
                     </div>
                     : null}
-                <p className="card-text p-3">
+                <p onClick={e => handleOpen(e)}
+                    className="card-text p-3">
                     {open ? news.body : cut(news.body, news.photo)}  </p>
             </div>
-            <div className="w-100 ">
-                <div className="mx-auto w-25px"><img
+            <div
+                onClick={e => handleOpen(e)}
+                className="w-100">
+                <div className="mx-auto w-25px">
+                    <img
                     src={open ? up : down}
                     alt="arrow"
                     className="arrow"/>

@@ -44,7 +44,7 @@ export default function MainPage() {
                 </div>
             </div>
             <hr className="my-sm-2 mx-sm-4 m-md-3 m-lg-3"/>
-            <div className="row m-3 bg-light flex-nowrap">
+            <div className="row m-3 flex-nowrap">
                 <MainPageNav setProjectByName={setProjectByName}/>
             </div>
             <OneProject photos={project.photos}

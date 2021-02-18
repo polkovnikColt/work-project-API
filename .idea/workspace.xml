@@ -23,9 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76484e9e-fdfa-4fda-b897-f6fd1bc18f29" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/server/routes/souvenirs/souvenirsRoute.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/schemas/projectSchema.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/schemas/projectSchema.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,11 +55,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\WebstormProjects\api-site-project\client\src\component\pages" />
+      <recent name="C:\Users\User\WebstormProjects\api-site-project\client\src\component\pages\additionalComponents" />
       <recent name="C:\Users\User\WebstormProjects\api-site-project\client\src\component\sidebars\additional" />
       <recent name="C:\Users\User\WebstormProjects\api-site-project\client\src\component\pages\news\additional" />
       <recent name="C:\Users\User\WebstormProjects\api-site-project\client\src\component\pages\main\additional" />
-      <recent name="C:\Users\User\WebstormProjects\api-site-project\client\src\component\pages\admin\additional" />
-      <recent name="C:\Users\User\WebstormProjects\api-site-project\server" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -78,7 +76,7 @@
       <workItem from="1612340947846" duration="52435000" />
       <workItem from="1613043854769" duration="18684000" />
       <workItem from="1613211543555" duration="11245000" />
-      <workItem from="1613381915323" duration="26199000" />
+      <workItem from="1613381915323" duration="46012000" />
     </task>
     <servers />
   </component>
@@ -110,10 +108,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="310" y="139" key="EditFileWatcherDialog/0.0.1280.720@0.0.1280.720" timestamp="1611838406865" />
-    <state x="421" y="116" key="FileChooserDialogImpl" timestamp="1613414451818">
+    <state x="421" y="116" key="FileChooserDialogImpl" timestamp="1613588278083">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="421" y="116" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1613414451818" />
+    <state x="421" y="116" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1613588278083" />
     <state x="111" y="186" width="587" height="534" key="find.popup" timestamp="1613132459131">
       <screen x="0" y="0" width="1280" height="720" />
     </state>

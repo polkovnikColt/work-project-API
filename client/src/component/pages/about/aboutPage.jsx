@@ -17,7 +17,6 @@ export default function AboutPage(){
     return(
         <div className="col-lg-9 col-md-9 col-sm-12">
             <div className="row w-100 m-0">
-                <span className="text">Громадська організація «Андрі́ївсько-Пейза́жна Ініціати́ва»</span>
                 <div className="m-2 text-justify main-text py-4">
                     Ми - українська громадська організація, яка була створена з метою об’єднання численних громадських рухів та
                     ініціатив. Її головне завдання — це захист та збереження історичної та культурної спадщини та природного

@@ -1,11 +1,41 @@
 @import "src/component/mainStyles";
-.souvenir{
-  width: 100%;
-  img{
+
+.souvenir {
+  @include font-small;
+  width: 48%;
+  box-sizing: border-box;
+
+  .souvenir-img {
     height: 200px;
   }
-  @media screen and(min-width: 1440px){
-    width: 50%;
+
+}
+@media screen and(max-width: 2560px) {
+  .souvenir {
+    width: 30%;
     box-sizing: border-box;
+    .souvenir-img{
+      height: 400px;
+    }
+  }
+}
+
+@media screen and(max-width: 1440px) {
+  .souvenir {
+    width: 30%;
+    box-sizing: border-box;
+    .souvenir-img{
+      height: 200px;
+    }
+  }
+}
+
+@media screen and(max-width: 450px) {
+  .souvenir {
+    width: 100%;
+    box-sizing: border-box;
+    .souvenir-img{
+      height: 200px;
+    }
   }
 }
