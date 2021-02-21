@@ -1,5 +1,5 @@
 import React, {useState, useRef} from 'react';
-import './mainPageStyles.scss'
+import './mainPageStyles.scss';
 import MainPageNav from "./additional/MainPageNav";
 import OneProject from "../additionalComponents/OneProject";
 import previewVideo from "../../../images/Autumn - 18420.mp4";
@@ -15,7 +15,8 @@ export default function MainPage() {
 
     const play = (e) => {
         e.stopPropagation();
-        video.current.play()
+        setTimeout(() => { video.current.play()},150)
+
     }
 
     const setProjectByName = (name) => {
@@ -24,23 +25,23 @@ export default function MainPage() {
 
     const pause = (e) => {
         e.stopPropagation();
-        setPaused(prev => !prev)
-        paused ? video.current.pause() : play(e);
+        setTimeout(() => {
+            setPaused(prev => !prev)
+            paused ? video.current.pause() : play(e);
+        },150);
     }
 
     return (
         <div className="col-lg-9 col-md-9 col-sm-12 p-0">
             <div className="row w-100 mx-auto">
                 <div className="mx-auto my-2 container-width row">
-                    <video className="responsive-width"
+                    <video className="responsive-width onPress-animation"
                            ref={video}
-                           onMouseOver={e => play(e)}
                            onClick={e => pause(e)}
                            src={previewVideo}
                            type={"video/mp4"}
                     >
                     </video>
-
                 </div>
             </div>
             <hr className="my-sm-2 mx-sm-4 m-md-3 m-lg-3"/>

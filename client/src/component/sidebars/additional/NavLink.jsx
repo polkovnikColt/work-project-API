@@ -6,7 +6,7 @@ export default function NavLink({item}) {
 
     return (
         <Link to={item.href}
-              className="link p-1 mx-1 ">
+              className="link p-1 mx-1 onPress-animation ">
             {item.title}
             <hr className="mx-3 my-2 a"/>
         </Link>

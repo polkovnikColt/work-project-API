@@ -57,7 +57,10 @@ $left: 50%;
   z-index: 10000;
   width: $left;
 }
-
+.arrow-decoration{
+  width: 20px;
+  height: 20px;
+}
 .open-button {
   position: fixed;
   z-index: 1000;

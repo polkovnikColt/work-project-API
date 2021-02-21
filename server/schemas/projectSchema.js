@@ -8,7 +8,7 @@ const schema = new Schema({
         type: String
     },
     photo: {
-        type: String
+        type: Array
     },
     price: {
         type: Number,
@@ -16,4 +16,4 @@ const schema = new Schema({
 
 });
 
-module.exports = model('Souvenir', schema);
+module.exports = model('Project', schema);

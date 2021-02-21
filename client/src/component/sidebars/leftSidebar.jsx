@@ -3,6 +3,7 @@ import "./leftSidebar.scss"
 import left from '../../images/iconmonstr-arrow-25.svg'
 import right from '../../images/iconmonstr-arrow-64.svg'
 import NavLink from "./additional/NavLink";
+import down from '../../images/arrow-down.svg'
 
 let links =
     [{title: "Головна", href: "/", subtitle: []},
@@ -25,6 +26,10 @@ export default function LeftSidebar() {
         }
 
         window.addEventListener('resize', handleResize);
+
+        return function cleanup() {
+            handleResize();
+        }
     });
 
     if (!visible && width < 765) {
@@ -46,20 +51,21 @@ export default function LeftSidebar() {
         return (
             <div
                 style={{"min-height": window.innerHeight + "px"}}
-                className="bg-light text-center box-shadow bar open-panel">
+                className="bg-light text-center box-shadow bar">
                 <div
-                    className="title py-3">
+                    className="title text-center py-3">
                     Розділи
                 </div>
                 <div className="my-auto">
-                {links.map((item) => {
-                    return <NavLink item={item} key={Math.random()}/>
-                })}
+                    {links.map((item) => {
+                        return <NavLink item={item} key={Math.random()}/>
+                    })}
                 </div>
                 <div
                     onClick={() => {
                         setArrow(prev => !prev)
-                        setVisible(false)}}
+                        setVisible(false)
+                    }}
                     className="close-button">
                     <img src={arrow ? right : left} alt=""/>
                 </div>
@@ -75,10 +81,11 @@ export default function LeftSidebar() {
                 className="title py-3">
                 Розділи
             </div>
+
             <div className="my-auto">
-            {links.map(item =>
-                <NavLink item={item} key={item}/>
-            )}
+                {links.map(item =>
+                    <NavLink item={item} key={item}/>
+                )}
             </div>
         </div>
     )

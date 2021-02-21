@@ -29,6 +29,15 @@
     }
   }
 }
+@media screen and(max-width: 768px) {
+  .souvenir {
+    width: 48%;
+    box-sizing: border-box;
+    .souvenir-img{
+      height: 200px;
+    }
+  }
+}
 
 @media screen and(max-width: 450px) {
   .souvenir {

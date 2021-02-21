@@ -19,11 +19,14 @@ export default function OneNews({news}) {
         }
 
         window.addEventListener('resize', handleResize);
+        return function cleanup() {
+            handleResize();
+        }
     });
 
     const handleOpen = e => {
         e.stopPropagation();
-        setOpen( prev => !prev);
+        setOpen(prev => !prev);
     }
 
     const handleSetPreview = e => {
@@ -38,21 +41,23 @@ export default function OneNews({news}) {
                 <div className="card-header news-title ">
                     <img src={newspaper} alt="newspaper" className="news-logo"/>
                     {news.title}
-                    <h6 className="ml-auto p-1 float-right">
+                    {width > 600 ? <h6 className="ml-auto p-3 float-right date">
                         {news.date}
-                    </h6>
+                    </h6> : <h6 className="ml-auto p-2 float-right date">
+                        {news.date}
+                    </h6>}
                 </div>
                 <div className="card-body">
                     {news.photo ? <><img
                             src={news.photo}
                             alt="full"
                             className="w-100"/>
-                    {width > 600 ?
-                        <span
-                        onClick={e => handleSetPreview(e)}
-                                  className="badge-photo-open">
+                            {width > 600 ?
+                                <span
+                                    onClick={e => handleSetPreview(e)}
+                                    className="badge-photo-open">
                                  <img src={zoomOut} alt=""/>
-                            </span> : null} </>
+                        </span> : null} </>
                         : null}
                     <p className="card-text">
                         {news.body}</p>
@@ -77,23 +82,23 @@ export default function OneNews({news}) {
                         className="preview p-2 position-relative"/>
                         <span
                             onClick={e => handleSetPreview(e)}
-                              className="badge-photo-close">
+                            className="badge-photo-close">
                             <img src={zoomIn} alt=""/>
                         </span>
                     </div>
                     : null}
                 <p onClick={e => handleOpen(e)}
-                    className="card-text p-3">
-                    {open ? news.body : cut(news.body, news.photo)}  </p>
+                   className="card-text p-3">
+                    {open ? news.body : cut(news.body, news.photo)}</p>
             </div>
             <div
                 onClick={e => handleOpen(e)}
                 className="w-100">
                 <div className="mx-auto w-25px">
                     <img
-                    src={open ? up : down}
-                    alt="arrow"
-                    className="arrow"/>
+                        src={open ? up : down}
+                        alt="arrow"
+                        className="arrow"/>
                 </div>
             </div>
         </div>

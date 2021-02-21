@@ -1,19 +1,19 @@
 const {Schema, model} = require('mongoose');
 
 const schema = new Schema({
-    title: {
+    name: {
         type: String
     },
-    body: {
+    description: {
         type: String
     },
     photo: {
         type: Array
     },
-    date: {
-        type: String,
+    price: {
+        type: Number,
     }
 
 });
 
-module.exports = model('News', schema);
+module.exports = model('Souvenir', schema);

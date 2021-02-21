@@ -23,7 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76484e9e-fdfa-4fda-b897-f6fd1bc18f29" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/server/routes/souvenirs/souvenirService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/schemas/souvenirSchema.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/souvenirs/souvenirsRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/souvenirs/souvenirsRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/schemas/newsSchema.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/schemas/newsSchema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/schemas/projectSchema.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/schemas/projectSchema.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,11 +60,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\WebstormProjects\api-site-project\client\src\component\navbar\additional" />
       <recent name="C:\Users\User\WebstormProjects\api-site-project\client\src\component\pages" />
       <recent name="C:\Users\User\WebstormProjects\api-site-project\client\src\component\pages\additionalComponents" />
       <recent name="C:\Users\User\WebstormProjects\api-site-project\client\src\component\sidebars\additional" />
       <recent name="C:\Users\User\WebstormProjects\api-site-project\client\src\component\pages\news\additional" />
-      <recent name="C:\Users\User\WebstormProjects\api-site-project\client\src\component\pages\main\additional" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -76,7 +81,8 @@
       <workItem from="1612340947846" duration="52435000" />
       <workItem from="1613043854769" duration="18684000" />
       <workItem from="1613211543555" duration="11245000" />
-      <workItem from="1613381915323" duration="46012000" />
+      <workItem from="1613381915323" duration="66815000" />
+      <workItem from="1613831019335" duration="4358000" />
     </task>
     <servers />
   </component>

@@ -1,6 +1,18 @@
 const express = require('express');
-const app = express.Router();
+const route = express.Router();
 
-app.get('/', (req,res) => {
+route.get('/', service.getAll);
 
-})
+route.get('/:id', service.getById);
+
+route.post('/post',
+    passport.authenticate('jwt', {session: false}),
+    service.createNews);
+
+route.delete('/delete/:id',
+    passport.authenticate('jwt', {session: false}),
+    service.delete);
+
+route.put('/update/:id',
+    passport.authenticate('jwt', {session: false}),
+    service.update);

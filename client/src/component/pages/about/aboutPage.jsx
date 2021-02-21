@@ -40,9 +40,9 @@ export default function AboutPage(){
                 </Table>
             </div>
             <nav className="navbar bg-main w-100 my-5 justify-content-center">
-                <img src={telegram} alt="media" className="media-icon mx-4"/>
-                <img src={facebook} alt="media" className="media-icon mx-4"/>
-                <img src={instagram} alt="media" className="media-icon mx-4"/>
+                <img src={telegram} alt="media" className="media-icon mx-4 onPress-animation"/>
+                <img src={facebook} alt="media" className="media-icon mx-4 onPress-animation"/>
+                <img src={instagram} alt="media" className="media-icon mx-4 onPress-animation"/>
             </nav>
         </div>
     )

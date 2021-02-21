@@ -1,26 +1,14 @@
 import React from 'react';
-import {Link} from "react-router-dom";
 
 export default function MainLink({title, open,setProjectByName}) {
-    if (open) {
-        return (
-            <div>
-                <Link
-                    onClick={() => setProjectByName(title)}
-                    className="custom-link">
-                    {title}
-                </Link>
-            </div>
-        )
-    }
     return (
         <>
-            <Link
+            <div
                 onClick={() => setProjectByName(title)}
-                className="custom-link ">
+                className="custom-link mx-1">
                 {title}
-            </Link>
-            <span className="mx-2 nav-slash">/</span>
+            </div>
+            {open ? null : <span className="mx-2 nav-slash">/</span>}
         </>
 
     )

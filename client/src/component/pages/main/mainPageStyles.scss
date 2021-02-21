@@ -20,11 +20,8 @@
 
 
 video{
- &:active{
-   transform: scaleX(180);
- }
-}
 
+}
 
 .custom-link {
   @include font-small-inherit;

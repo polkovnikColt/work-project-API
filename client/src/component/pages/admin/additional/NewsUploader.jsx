@@ -16,6 +16,10 @@ export default function NewsUploader({type}) {
         console.log(`File ${file}, news.title ${news.title}, news.body ${news.body}`);
     }
 
+    const handleChange = (e) => {
+        setNews({...news, [e.target.name]: e.target.value});
+    }
+
     const handleImageChange = (e) => {
         e.preventDefault();
 
@@ -35,7 +39,7 @@ export default function NewsUploader({type}) {
             {type === 'upload' ?
                 <InputGroup className="my-3">
                     <FormControl
-                        onChange={e => setNews({...news, title: e.target.value})}
+                        onChange={handleChange}
                         placeholder="Назва"
                         aria-label="Recipient's username"
                         aria-describedby="basic-addon2"
@@ -56,11 +60,7 @@ export default function NewsUploader({type}) {
                             <InputGroup.Text>Текст новини</InputGroup.Text>
                         </InputGroup.Prepend>
                         <FormControl
-                            onChange={e => setNews(
-                                {
-                                    ...news,
-                                    body: e.target.value
-                                })}
+                            onChange={handleChange}
                             as="textarea"
                             aria-label="With textarea"
                             value={news.body}
@@ -68,13 +68,13 @@ export default function NewsUploader({type}) {
                     </InputGroup>
                     <form className="input-group w-100 mt-3"
                           action=""
-                          onSubmit={e => handleSubmit(e)}>
+                          onSubmit={handleSubmit}>
                         <input
-                            onChange={e => handleImageChange(e)}
+                            onChange={ handleImageChange}
                             className=""
                             type="file"/>
                         <button
-                            onClick={e => handleSubmit(e)}
+                            onClick={handleSubmit}
                             className="btn btn-outline-secondary my-2">
                             Завантажити
                         </button>

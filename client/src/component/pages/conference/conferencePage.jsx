@@ -34,7 +34,8 @@ export default function ConferencePage(){
         <div className="col-lg-9 col-md-9 col-sm-12 p-0">
             <div className="row w-100 m-0">
             {conferences.map(item =>
-                <div className="mx-auto"><OneProject key ={item}
+                <div className="mx-auto"><OneProject
+                            key ={item}
                             photos={item.photos}
                             content={item.content}
                 /></div> )}
