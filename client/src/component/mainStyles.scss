@@ -1,19 +1,20 @@
 $font-color: #333330;
-$primary-color : #313860;
+$primary-color: #313860;
 $font-family: "Bookman Old Style";
 
-.max-height{
+.max-height {
   max-height: 700px;
 }
 
-.bg-main{
+.bg-main {
   background-color: $primary-color;
   color: #fffff3;
 }
-.onPress-animation{
-  &:active{
+
+.onPress-animation {
+  &:active {
     transition: 0.2s;
-    transform: scale(0.98,0.98);
+    transform: scale(0.98, 0.98);
   }
 }
 
@@ -22,73 +23,75 @@ $font-family: "Bookman Old Style";
   font-weight: bold;
   font-family: $font-family;
   color: $font-color;
-  @media screen and (max-width: 2560px){
+  @media screen and (max-width: 2560px) {
     font-size: 70px;
   }
-  @media screen and (max-width: 1440px){
+  @media screen and (max-width: 1440px) {
     font-size: 42px;
   }
-  @media screen and (max-width: 800px){
+  @media screen and (max-width: 800px) {
     font-size: 35px;
   }
-  @media screen and (max-width: 560px){
+  @media screen and (max-width: 560px) {
     font-size: 30px;
   }
 }
+
 @mixin font-medium {
   font-size: 25px;
   font-weight: bold;
   font-family: $font-family;
   color: $font-color;
 
-  @media screen and (max-width: 2560px){
+  @media screen and (max-width: 2560px) {
     font-size: 45px;
     padding: 5%;
   }
-  @media screen and (max-width: 1440px){
+  @media screen and (max-width: 1440px) {
     font-size: 27px;
     padding: 5%;
   }
-  @media screen and (max-width: 1024px){
+  @media screen and (max-width: 1024px) {
     font-size: 33px;
     padding: 5%;
   }
-  @media screen and (max-width: 900px){
+  @media screen and (max-width: 900px) {
     font-size: 27px;
     padding: 5%;
   }
-  @media screen and (max-width: 600px){
+  @media screen and (max-width: 600px) {
     font-size: 17px;
   }
-  @media screen and (max-width: 361px){
+  @media screen and (max-width: 361px) {
     font-size: 14px;
   }
 }
+
 @mixin font-medium-no-bold {
   font-size: 25px;
   font-family: $font-family;
   color: $font-color;
 
-  @media screen and (max-width: 2560px){
+  @media screen and (max-width: 2560px) {
     font-size: 45px;
     padding: 5%;
   }
-  @media screen and (max-width: 1440px){
+  @media screen and (max-width: 1440px) {
     font-size: 27px;
     padding: 5%;
   }
-  @media screen and (max-width: 1024px){
+  @media screen and (max-width: 1024px) {
     font-size: 31px;
     padding: 5%;
   }
-  @media screen and (max-width: 900px){
+  @media screen and (max-width: 900px) {
     font-size: 23px;
     padding: 5%;
   }
-  @media screen and (max-width: 600px){
+  @media screen and (max-width: 600px) {
     font-size: 17px;
   }
-  @media screen and (max-width: 361px){
+  @media screen and (max-width: 361px) {
     font-size: 14px;
   }
 }
@@ -101,83 +104,107 @@ $font-family: "Bookman Old Style";
   margin-right: 1rem;
   line-height: inherit;
   white-space: nowrap;
-  @media screen and (max-width: 2560px){
+  @media screen and (max-width: 2560px) {
     font-size: 39px;
   }
-  @media screen and (max-width: 1440px){
+  @media screen and (max-width: 1440px) {
     font-size: 26px;
   }
-  @media screen and (max-width: 700px){
+  @media screen and (max-width: 700px) {
     font-size: 21px;
   }
-  @media screen and (max-width: 600px){
+  @media screen and (max-width: 600px) {
     font-size: 15px;
   }
-  @media screen and (max-width: 450px){
+  @media screen and (max-width: 450px) {
     font-size: 13px;
   }
-  @media screen and (max-width: 380px){
+  @media screen and (max-width: 380px) {
     font-size: 11px;
   }
-  @media screen and (max-width: 361px){
+  @media screen and (max-width: 361px) {
     font-size: 9px;
   }
 }
 
-@mixin font-small{
+@mixin font-small {
   font-size: 18px;
   font-family: $font-family;
   color: $font-color;
-  @media screen and (min-width: 2560px){
+  @media screen and (min-width: 2560px) {
     font-size: 40px;
     padding: 5%;
   }
-  @media screen and (min-width: 1440px){
+  @media screen and (min-width: 1440px) {
     font-size: 30px;
-    padding:0.7%;
-  }
-  @media screen and (min-width: 1024px){
-    font-size: 23px;
-    padding:0.7%;
-  }
-  @media screen and (max-width: 560px){
-    font-size: 16px;
-  }
-  @media screen and (max-width: 360px){
-    font-size: 13px;
-  }
-}
-@mixin font-small-inherit{
-  font-size: 18px;
-  font-family: $font-family;
-  color: whitesmoke;
-  @media screen and (min-width: 2560px){
-    font-size: 35px;
-    padding: 5%;
-  }
-  @media screen and (min-width: 1440px){
-    font-size: 26px;
     padding: 0.7%;
   }
-  @media screen and (max-width: 560px){
+  @media screen and (min-width: 1024px) {
+    font-size: 23px;
+    padding: 0.7%;
+  }
+  @media screen and (max-width: 560px) {
     font-size: 16px;
   }
-  @media screen and (max-width: 360px){
+  @media screen and (max-width: 360px) {
     font-size: 13px;
   }
 }
 
-@mixin font-small-primary-colored{
+@mixin font-small-no-color {
   font-size: 18px;
   font-family: $font-family;
-  @media screen and (min-width: 2560px){
+  @media screen and (min-width: 2560px) {
+    font-size: 40px;
+    padding: 5%;
+  }
+  @media screen and (min-width: 1440px) {
+    font-size: 30px;
+    padding: 0.7%;
+  }
+  @media screen and (min-width: 1024px) {
+    font-size: 23px;
+    padding: 0.7%;
+  }
+  @media screen and (max-width: 560px) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: 360px) {
+    font-size: 13px;
+  }
+}
+
+@mixin font-small-inherit {
+  font-size: 18px;
+  font-family: $font-family;
+  color: whitesmoke;
+  @media screen and (min-width: 2560px) {
     font-size: 35px;
     padding: 5%;
   }
-  @media screen and (max-width: 560px){
+  @media screen and (min-width: 1440px) {
+    font-size: 26px;
+    padding: 0.7%;
+  }
+  @media screen and (max-width: 560px) {
     font-size: 16px;
   }
-  @media screen and (max-width: 360px){
+  @media screen and (max-width: 360px) {
+    font-size: 13px;
+  }
+}
+
+@mixin font-small-primary-colored {
+  font-size: 18px;
+  font-family: $font-family;
+  @media screen and (min-width: 2560px) {
+    font-size: 35px;
+    padding: 5%;
+  }
+  @media screen and (max-width: 560px) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: 360px) {
     font-size: 13px;
   }
 }
@@ -195,14 +222,14 @@ $font-family: "Bookman Old Style";
 }
 
 .container-width {
-  width: 750px;
+  width: 800px;
 }
 
 
 @media screen and (min-width: 2560px) {
   .responsive-width {
     width: 1500px;
-    height: 500px;
+    height: 450px;
   }
   .container-width {
     width: 1500px;
@@ -216,8 +243,7 @@ $font-family: "Bookman Old Style";
 @media screen and (max-width: 1440px) {
   .responsive-width {
     width: 800px;
-    height: 450px;
-    padding-top: 3%;
+    height: 400px;
   }
   .container-width {
     width: 800px;
@@ -232,12 +258,10 @@ $font-family: "Bookman Old Style";
   .responsive-width {
     width: 700px;
     height: 300px;
-    padding-top: 4%;
   }
   .responsive-font-width {
     width: 700px;
     height: auto;
-    padding-top: 4%;
   }
   .container-width {
     width: 700px;
@@ -247,7 +271,7 @@ $font-family: "Bookman Old Style";
 @media screen and (max-width: 920px) {
   .responsive-width {
     width: 550px;
-    height: 350px;
+    height: 300px;
   }
   .container-width {
     width: 550px;
@@ -258,14 +282,14 @@ $font-family: "Bookman Old Style";
   }
 }
 
-.line{
+.line {
   margin: 2px 0;
   width: 25px;
   height: 4px;
   background-color: whitesmoke;
 }
 
-.burger-menu{
+.burger-menu {
   position: sticky;
   left: 90%;
   margin-bottom: auto;
@@ -321,7 +345,7 @@ $font-family: "Bookman Old Style";
     height: 240px;
   }
   .container-width {
-    width: 350px;
+    width: 400px;
   }
   .responsive-font-width {
     width: 350px;
@@ -331,14 +355,27 @@ $font-family: "Bookman Old Style";
 
 @media screen and (max-width: 380px) {
   .responsive-width {
-    width: 260px;
-    height: 190px;
+    width: 330px;
+    height: 170px;
   }
   .container-width {
-    width: 260px;
+    width: 350px;
   }
   .responsive-font-width {
-    width: 260px;
+    width: 330px;
+    height: auto;
+  }
+}
+@media screen and (max-width: 320px) {
+  .responsive-width {
+    width: 280px;
+    height: 150px;
+  }
+  .container-width {
+    width: 300px;
+  }
+  .responsive-font-width {
+    width: 280px;
     height: auto;
   }
 }

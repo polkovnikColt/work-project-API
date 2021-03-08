@@ -1,20 +1,20 @@
 import React from 'react';
-import Carousel from "../main/additional/Carousel";
+import Carousel from "./Carousel";
 
 export default function OneProject({photos, content, links}) {
     return (
         <div className="one-project">
             {photos.length > 1 ?
                 <Carousel
-                    className="border-top-rounder"
+                    className="mx-auto"
                     photos={photos}
                     interval={null}/>
-                : <div className="container-width mx-auto">
+                : <div className="container-width">
                     <img
-                    className="responsive-width"
-                    src={photos[0]}
-                    alt="photo"/>
-            </div>}
+                        className="responsive-width mx-auto mt-2 "
+                        src={photos[0]}
+                        alt="photo"/>
+                </div>}
             <div
                 className="card-body
                     bg-light

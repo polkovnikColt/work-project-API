@@ -1,8 +1,6 @@
 import React from 'react';
 import {Route, Redirect} from 'react-router-dom';
-import AdminPage from "./component/pages/admin/AdminPages";
 
-//TODO fix protected route
-export default function ProtectedRoute({isAuth}) {
-    return isAuth ?<Route component={AdminPage} path={'/admins'}/> : <Redirect to={'/'}/>;
+export default function ProtectedRoute({isAuth,component,path}) {
+    return isAuth ? <Route component={component} path={path}/> : <Redirect to={'/'}/>;
 }

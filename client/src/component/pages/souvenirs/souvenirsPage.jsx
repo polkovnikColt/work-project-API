@@ -1,6 +1,6 @@
 import React from 'react';
-import kiev1 from '../../../images/kiev1 .jpg';
-import kiev2 from '../../../images/kiev2.jpg';
+import kiev1 from '../../../images/mockPhoto/kiev1 .jpg';
+import kiev2 from '../../../images/mockPhoto/kiev2.jpg';
 import SouvenirCard from "./additional/SouvenirCard";
 
 const souvenirs = [{photos: [kiev1], name: "Сувенір №1", description: "Опис цього сувеніру"},

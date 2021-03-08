@@ -1,28 +1,17 @@
 import React, {useEffect, useState} from 'react';
 import '../newsPageStyles.scss';
-import {cut} from './newsService';
-import up from '../../../../images/up-arrow.svg';
-import down from '../../../../images/arrow-down.svg';
-import newspaper from '../../../../images/newspaper.svg';
-import zoomOut from '../../../../images/socialmedia/magnifying-glass.svg';
-import zoomIn from '../../../../images/zoom-in.svg';
+import {cut} from './service';
+import up from '../../../../images/icons/up-arrow.svg';
+import down from '../../../../images/icons/arrow-down.svg';
+import newspaper from '../../../../images/icons/newspaper.svg';
+import {useDimension} from "../../../../hooks/useDimension";
+import Photo from './Photo';
 
 export default function OneNews({news}) {
 
     const [open, setOpen] = useState(false);
     const [preview, setPreview] = useState(false);
-    const [width, setWidth] = useState(window.innerWidth);
-
-    useEffect(() => {
-        function handleResize() {
-            setWidth(window.innerWidth);
-        }
-
-        window.addEventListener('resize', handleResize);
-        return function cleanup() {
-            handleResize();
-        }
-    });
+    const width = useDimension(window.innerWidth);
 
     const handleOpen = e => {
         e.stopPropagation();
@@ -34,65 +23,30 @@ export default function OneNews({news}) {
         setPreview(prev => !prev);
     }
 
-    if (preview || width < 600) {
-        return (
-            <div
-                className="card m-2 text-justify one-news">
-                <div className="card-header news-title ">
-                    <img src={newspaper} alt="newspaper" className="news-logo"/>
-                    {news.title}
-                    {width > 600 ? <h6 className="ml-auto p-3 float-right date">
-                        {news.date}
-                    </h6> : <h6 className="ml-auto p-2 float-right date">
-                        {news.date}
-                    </h6>}
-                </div>
-                <div className="card-body">
-                    {news.photo ? <><img
-                            src={news.photo}
-                            alt="full"
-                            className="w-100"/>
-                            {width > 600 ?
-                                <span
-                                    onClick={e => handleSetPreview(e)}
-                                    className="badge-photo-open">
-                                 <img src={zoomOut} alt=""/>
-                        </span> : null} </>
-                        : null}
-                    <p className="card-text">
-                        {news.body}</p>
-                </div>
-            </div>
-        )
-    }
-
     return (
-        <div style={{"height": open ? "auto" : "280px"}}
+        <div style={{"height": open || preview || width < 600 ? "auto" : "280px"}}
              className="card m-2 text-justify one-news">
             <div className="card-header news-title ">
                 <img src={newspaper} alt="newspaper" className="news-logo"/>
                 {news.title}
-                <h6 className="ml-auto p-3 float-right">{news.date}</h6>
+                <h6 className="ml-auto p-2 float-right date">{news.date}</h6>
             </div>
             <div className="card-body">
                 {news.photo ?
-                    <div><img
-                        src={news.photo}
-                        alt="preview"
-                        className="preview p-2 position-relative"/>
-                        <span
-                            onClick={e => handleSetPreview(e)}
-                            className="badge-photo-close">
-                            <img src={zoomIn} alt=""/>
-                        </span>
-                    </div>
+                    <Photo
+                        preview={preview}
+                        photo={news.photo}
+                        handleSetPreview={handleSetPreview}
+                        width={width}
+                    />
                     : null}
-                <p onClick={e => handleOpen(e)}
-                   className="card-text p-3">
-                    {open ? news.body : cut(news.body, news.photo)}</p>
+                <p onClick={handleOpen}
+                   className="card-text p-1">
+                    {open || preview || width < 600 ? news.body : cut(news.body, news.photo)}</p>
             </div>
-            <div
-                onClick={e => handleOpen(e)}
+            {preview || width < 600 ? null :
+                <div
+                onClick={handleOpen}
                 className="w-100">
                 <div className="mx-auto w-25px">
                     <img
@@ -100,7 +54,7 @@ export default function OneNews({news}) {
                         alt="arrow"
                         className="arrow"/>
                 </div>
-            </div>
+            </div>}
         </div>
     )
 }

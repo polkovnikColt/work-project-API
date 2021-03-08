@@ -1,0 +1,29 @@
+@import 'src/component/mainStyles';
+
+.button-primary{
+  color:#007bff;
+  display: inline-block;
+  font-weight: 400;
+  @include font-small-no-color;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: #007bff 1px solid ;
+  padding: .300rem .60rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  &:hover{
+    background-color:#007bff ;
+    color: #fffff3;
+    transition: .3s;
+  }
+}
+
+.by-solid{
+  border-left: $primary-color 2px solid;
+  border-right: $primary-color 2px solid;
+  margin: 0 .15em;
+}

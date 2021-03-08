@@ -1,5 +1,5 @@
 import React from "react";
-import {Accordion, Button, Card, Form, FormControl, InputGroup} from "react-bootstrap";
+import {Accordion, Button, Card, Form} from "react-bootstrap";
 import './adminPageStyles.scss'
 import NewsUploader from "./additional/NewsUploader";
 import AdminUploader from "./additional/AdminUploader";

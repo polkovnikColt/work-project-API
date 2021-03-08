@@ -1,6 +1,6 @@
 import React from 'react';
 import './navbarStyles.scss';
-import logo from '../../images/logo crop.png';
+import logo from '../../images/icons/logo crop.png';
 import ModalWindow from "./additional/Modal";
 import {Navbar, Nav} from "react-bootstrap";
 import "./navbarStyles.scss";

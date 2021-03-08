@@ -1,6 +1,6 @@
 import React from 'react';
-import api from '../../../images/api.jpg';
-import OneNews from "./additional/OneNews";
+import api from '../../../images/mockPhoto/api.jpg';
+import OneNews from './additional/OneNews';
 
 const news = [{
     title: "Новина №1",
@@ -46,7 +46,7 @@ const news = [{
 export default function NewsPage() {
     return (
         <div className="col-lg-8 col-md-8 custom-col-sm-12 p-md-2 p-lg-2 mx-auto news-block">
-                {news.map(item => <OneNews news={item}/>)}
+                {news.map((item,i) => <OneNews news={item} key = {i}/>)}
         </div>
     )
 }

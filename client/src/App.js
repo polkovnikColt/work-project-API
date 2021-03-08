@@ -9,6 +9,7 @@ import AboutPage from "./component/pages/about/AboutPage";
 import ProtectedRoute from "./ProtectedRoute";
 import ConferencePage from "./component/pages/conference/ConferencePage";
 import SouvenirsPage from "./component/pages/souvenirs/SouvenirsPage";
+import AdminPage from "./component/pages/admin/AdminPages";
 
 function App() {
 
@@ -27,7 +28,8 @@ function App() {
                         <Route path={'/souvenirs'} component={SouvenirsPage}/>
                         <ProtectedRoute
                             path = {'/admins'}
-                            isAuth={true}/>
+                            component={AdminPage}
+                            isAuth={false}/>
                     </Switch>
                 </div>
         </HashRouter>

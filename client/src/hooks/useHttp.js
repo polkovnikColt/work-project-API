@@ -1,6 +1,11 @@
 import axios from "axios";
 import {useState, useEffect} from 'react';
 
+axios.interceptors.request.use((config)=>{
+    config.headers.Authorization = localStorage.getItem("token");
+    return config;
+})
+
 export const useHttp = (url, METHOD = 'get', options = {}) => {
     const [response, setResponse] = useState(null);
     const [error, setError] = useState(null);
@@ -14,7 +19,6 @@ export const useHttp = (url, METHOD = 'get', options = {}) => {
             data: options
         })
             .then(res =>{
-                console.log(res.data);
                 setResponse(res.data);
                 setLoading(false);
             })

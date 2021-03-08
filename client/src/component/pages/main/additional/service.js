@@ -1,5 +1,5 @@
-import kiev1 from '../../../../images/kiev1 .jpg';
-import kiev2 from '../../../../images/kiev2.jpg';
+import kiev1 from '../../../../images/mockPhoto/kiev1 .jpg';
+import kiev2 from '../../../../images/mockPhoto/kiev2.jpg';
 
 
 export const getProjects = () => {
@@ -54,3 +54,5 @@ export const getProjects = () => {
 export const getProjectByName = (name) => {
     return getProjects().filter(item => item.content.title === name)[0];
 }
+
+export const getLinks = () => ["Пейзажна алея", "Десятинна церква", "Головний проект", "Додатковий проект"];

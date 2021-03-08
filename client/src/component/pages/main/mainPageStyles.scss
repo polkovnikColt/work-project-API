@@ -18,9 +18,8 @@
   @include font-small-primary-colored;
 }
 
-
-video{
-
+.video{
+  padding: .235em;
 }
 
 .custom-link {
@@ -37,5 +36,13 @@ video{
     text-decoration: none;
     background-size: 100% 2px;
   }
+}
+
+.button{
+  width: 4.75em;
+  height: 4.75em;
+  background-color: #00000f;
+  border-radius: 50px;
+  opacity: .7;
 }
 

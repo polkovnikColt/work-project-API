@@ -4,6 +4,21 @@ $font-color: gray;
 $link-color: #333330;
 $left: 50%;
 
+@mixin button{
+  position: fixed;
+  z-index: 1000;
+  width: 1.7em;
+  height: 6.4em;
+  background-color: #f8f9fa!important;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  img{
+    width: 18px;
+    height: 18px;
+    margin: 40px 0 0 5px;
+  }
+}
+
 .title {
   @include font-big;
 }
@@ -24,15 +39,15 @@ $left: 50%;
 }
 
 .min-height {
-  min-height: 500px;
+  min-height: 30em;
 }
 
 .link-div {
   height: auto;
 }
 .arrow-sidebar{
-  width: 15px;
-  height: 15px;
+  width: 0.5em;
+  height: 0.5em;
 }
 
 .link {
@@ -57,40 +72,16 @@ $left: 50%;
   z-index: 10000;
   width: $left;
 }
-.arrow-decoration{
-  width: 20px;
-  height: 20px;
-}
+
 .open-button {
-  position: fixed;
-  z-index: 1000;
-  width: 25px;
-  height: 100px;
-  background-color: #f8f9fa!important;
+  @include button;
   box-shadow: #333330 0 0 3px;
-  border-bottom-right-radius: 30px;
-  border-top-right-radius: 30px;
-  img{
-    width: 18px;
-    height: 18px;
-    margin: 40px 0 0 5px;
-  }
 }
 
+
 .close-button{
-  position: fixed;
+  @include button;
   left: $left;
   top: 50%;
-  z-index: 500;
-  width: 25px;
-  height: 100px;
-  background-color: #f8f9fa!important;
   box-shadow: #333330 0.5px 0 1px;
-  border-bottom-right-radius: 30px;
-  border-top-right-radius: 30px;
-  img{
-    width: 18px;
-    height: 18px;
-    margin: 40px 0 0 5px;
-  }
 }

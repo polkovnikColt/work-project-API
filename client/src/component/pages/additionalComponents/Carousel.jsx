@@ -1,5 +1,5 @@
 import React from 'react';
-import '../mainPageStyles.scss';
+import '../main/mainPageStyles.scss';
 import {Carousel} from "react-bootstrap";
 
 

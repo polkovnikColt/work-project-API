@@ -1,7 +1,7 @@
 import React from 'react';
 import OneProject from "../additionalComponents/OneProject";
-import kiev1 from '../../../images/kiev1 .jpg';
-import kiev2 from '../../../images/kiev2.jpg';
+import kiev1 from '../../../images/mockPhoto/kiev1 .jpg';
+import kiev2 from '../../../images/mockPhoto/kiev2.jpg';
 
 const conferences = [{photos:[kiev1,kiev2,kiev1],content:{title:"Конференція №1",
         body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, " +

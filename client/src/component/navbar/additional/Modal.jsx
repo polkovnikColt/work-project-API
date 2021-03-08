@@ -1,32 +1,29 @@
-import React, {useEffect, useState} from 'react';
-import {Modal, Button} from "react-bootstrap";
+import React, {useState} from 'react';
+import {Modal,Button} from "react-bootstrap";
 import "../navbarStyles.scss";
 import {login} from "./service";
 
+
 export default function ModalWindow() {
     const [show, setShow] = useState(false);
-    const [email,setEmail] = useState('');
-    const [password,setPassword] = useState('');
-    const [token, setToken] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
 
-    const logAndClose =  async () => {
-        const serverToken = await login({email:email,password:password});
-        setToken(serverToken);
+
+    const logAndClose = async () => {
+        // const serverToken = await login({email: email, password: password});
         setShow(false);
     };
-    const handleClose = ()  => {
-        setShow(false);
-    }
+    const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
     return (
         <>
             <Button
-                className="button-font"
-                variant="outline-primary"
                 onClick={handleShow}>
                 Вхід
             </Button>
+
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>Вхід</Modal.Title>
@@ -58,5 +55,5 @@ export default function ModalWindow() {
                 </Modal.Footer>
             </Modal>
         </>
-    );
+    )
 }
